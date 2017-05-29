@@ -50,7 +50,7 @@
 
 					var entry3 = document.createElement('li');
 
-					entry3.className = "expand";
+					entry3.className = "boots";
 
 					entry3.appendChild(document.createTextNode(window.geemails[i].subject));
 					
@@ -70,14 +70,16 @@
 
         }
 
-        //var divElem = document.getElementsByClassName("expand");
+        //event listener
 
-				//console.log(divElem);
+        var divElem = document.getElementsByClassName("boots");
 
-				//for(i = 0; i<divElem.length; i++){
+				console.log(divElem);
+
+				for(i = 0; i<divElem.length; i++){
   
-  			//divElem[i].addEventListener("click", toggle);
-				//}
+  			divElem[i].addEventListener("click", toggle);
+				}
 
 				//var pElem = document.getElementsByClassName("menu");
 
