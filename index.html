@@ -58,17 +58,28 @@
         
         	//populates bodies
 
-        	var body4 = document.getElementById("body");
+        	var note = document.getElementById("body");
+
+        	console.log(note);
 
 					var entry4 = document.createElement('li');
 
-					entry4.className = "bodyExpanded";
+					entry4.className = "display";
 
 					entry4.appendChild(document.createTextNode(window.geemails[i].body));
 					
-					body4.appendChild(entry4);
+					note.appendChild(entry4);
 
         }
+
+        //hide bodies before selected
+
+				//var liElem = document.getElementsByClassName("bodyExpanded");
+
+				//for(i = 0; i<liElem.length; i++){
+				
+				//liElem[i].style.display = "none";
+				//}
 
         //event listener
 
@@ -81,12 +92,9 @@
   			divElem[i].addEventListener("click", toggle);
 				}
 
-				//var pElem = document.getElementsByClassName("menu");
-
-				//for(var j = 0; j<pElem.length; j++){
 				
-				//pElem[j].style.display = "none";
-				//}
+
+				
 
 				//function toggle(){
 				//var showMenu = this.querySelectorAll(".menu")[0];
