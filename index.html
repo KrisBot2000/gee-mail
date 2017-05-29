@@ -8,11 +8,11 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
      		
-        //use setInterval function
+        //get new messages without invoking function
 
         setInterval(getNewMessage, 10);
      		
-				//counts number of emails:
+				//counts number of emails
 
      		var emails = window.geemails.length;
 
@@ -50,11 +50,56 @@
 
 					var entry3 = document.createElement('li');
 
+					entry3.className = "expand";
+
 					entry3.appendChild(document.createTextNode(window.geemails[i].subject));
 					
 					subject3.appendChild(entry3);
+        
+        	//populates bodies
+
+        	var body4 = document.getElementById("body");
+
+					var entry4 = document.createElement('li');
+
+					entry4.className = "bodyExpanded";
+
+					entry4.appendChild(document.createTextNode(window.geemails[i].body));
+					
+					body4.appendChild(entry4);
+
         }
 
+        //var divElem = document.getElementsByClassName("expand");
+
+				//console.log(divElem);
+
+				//for(i = 0; i<divElem.length; i++){
+  
+  			//divElem[i].addEventListener("click", toggle);
+				//}
+
+				//var pElem = document.getElementsByClassName("menu");
+
+				//for(var j = 0; j<pElem.length; j++){
+				
+				//pElem[j].style.display = "none";
+				//}
+
+				//function toggle(){
+				//var showMenu = this.querySelectorAll(".menu")[0];
+  
+				//console.log(showMenu);
+
+  			//if (showMenu.style.display==="none"){
+    		//console.log("if "+showMenu.style.display);
+    		//showMenu.style.display = "block";
+    		//console.log("none to block:" + showMenu.style.display);
+  			//}
+
+  			//else{showMenu.style.display = "none";
+  			//console.log("else: now " + showMenu.style.display);
+       	//}
 
       };
     </script>
@@ -64,19 +109,19 @@
 			<header>
 				<h1 id ="logo">
 				GeeMail</h1>
-				<h2 id ="counter">Number of emails:</h2
-
+				<h2 id ="counter">Number of emails:</h2>
 			</header>
-			<h3 id ="from" class="categories">Sender</h3>
+			</div id = "content">
+				<h3 id ="from" class="categories">Sender</h3>
 				
-			<h3 id ="date"class="categories">Date</h3>
+				<h3 id ="date"class="categories">Date</h3>
 				
-			<h3 id = "subject" class="categories">Subject</h3>
-				
-		</div>
+				<h3 id = "subject" class="categories">Subject</h3>
+
+				<h3 id = "body" class="categories">Body</h3>
+			</div>	
 		<footer>
 			<p id="credit">Site Design and Development By Kristin Treder</p>
-	</div>
-</footer>
+		</footer>
 	</body>
 </html>
