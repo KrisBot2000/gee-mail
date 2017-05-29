@@ -9,24 +9,19 @@
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
      		
         //get new messages without invoking function
-
-        setInterval(getNewMessage, 10);
+				setInterval(getNewMessage, 10);
      		
 				//counts number of emails
-
-     		var emails = window.geemails.length;
+				var emails = window.geemails.length;
 
         //email counter display
+				document.getElementById("counter").innerHTML = "Number of emails: " + emails;
 
-        document.getElementById("counter").innerHTML = "Number of emails: " + emails;
+        //go through each email
+				for(var i=0; i<window.geemails.length; i++){
 
-        //loops through objects in window.geemails array
-
-        for(var i=0; i<window.geemails.length; i++){
-
-        	//populates senders
-
-        	var sender1 = document.getElementById("from");
+        	//populate senders
+					var sender1 = document.getElementById("from");
 
 					var entry1 = document.createElement('li');
 
@@ -34,9 +29,8 @@
 					
 					sender1.appendChild(entry1);
         	
-					//populates dates
-
-        	var date2 = document.getElementById("date");
+					//populate dates
+					var date2 = document.getElementById("date");
 
 					var entry2 = document.createElement('li');
 
@@ -44,8 +38,7 @@
 					
 					date2.appendChild(entry2);
 
-					//populates subjects
-
+					//populate subjects
 					var subject3 = document.getElementById("subject");
 
 					var entry3 = document.createElement('li');
@@ -55,62 +48,42 @@
 					entry3.appendChild(document.createTextNode(window.geemails[i].subject));
 					
 					subject3.appendChild(entry3);
+
+						//add event listener
+						entry3.addEventListener("click", toggle);
         
-        	//populates bodies
-
-        	var note = document.getElementById("body");
-
-        	//console.log(note);
+        	//populate bodies
+					var note = document.getElementById("body");
 
 					var entry4 = document.createElement('li');
 
-					entry4.className = "display";
+					entry4.className = "fishies";
 
 					entry4.appendChild(document.createTextNode(window.geemails[i].body));
 					
 					note.appendChild(entry4);
 
-        }
-
-        //hide bodies before selected
-
-				var liElem = document.getElementsByClassName("display");
-
-				for(i = 0; i<liElem.length; i++){
-				
-				liElem[i].style.display = "none";
+						//hide bodies to start
+						entry4.style.display = "none";
 				}
 
-        //event listener
+				//toggle between show and hide email bodies
+				function toggle(){
 
-        var divElem = document.getElementsByClassName("boots");
-
-				console.log(divElem);
-
-				for(i = 0; i<divElem.length; i++){
+				var showBody = this.querySelectorAll("fishies")[0];
   
-  			divElem[i].addEventListener("click", toggle);
-				}
+				console.log("showBody: " +showBody);
 
-				
+  				//if (showBody.style.display==="none"){
+    			//console.log("if===none "+showBody.style.display);
+    			//showBody.style.display = "block";
+    			//console.log("none to block:" + showBody.style.display);
+  				//}
 
-				
-
-				//function toggle(){
-				//var showMenu = this.querySelectorAll(".menu")[0];
-  
-				//console.log(showMenu);
-
-  			//if (showMenu.style.display==="none"){
-    		//console.log("if "+showMenu.style.display);
-    		//showMenu.style.display = "block";
-    		//console.log("none to block:" + showMenu.style.display);
-  			//}
-
-  			//else{showMenu.style.display = "none";
-  			//console.log("else: now " + showMenu.style.display);
-       	//}
-
+  				//else{showBody.style.display = "none";
+  				//console.log("else: now " + showBody.style.display);
+       		//}
+       	}		
       };
     </script>
 	</head>
