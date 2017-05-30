@@ -55,15 +55,16 @@
         	//populate bodies
 					var note = document.getElementById("body");
 
-					var entry4 = document.createElement('li');
+					var entry4 = document.createElement('p');
 
 					entry4.className = "fishies";
 
 					entry4.appendChild(document.createTextNode(window.geemails[i].body));
 					
-					note.appendChild(entry4);
+					entry3.appendChild(entry4);
 
-					
+					subject3.appendChild(note);
+						
 						//hide bodies to start
 						entry4.style.display = "none";
 				}
@@ -73,17 +74,17 @@
 
 				var showBody = this.querySelectorAll(".fishies")[0];
   
-				console.log("showBody: " +showBody);
+				//console.log("showBody: " +showBody);
 
-  				//if (showBody.style.display==="none"){
+  				if (showBody.style.display==="none"){
     			//console.log("if===none "+showBody.style.display);
-    			//showBody.style.display = "block";
+    			showBody.style.display = "block";
     			//console.log("none to block:" + showBody.style.display);
-  				//}
+  				}
 
-  				//else{showBody.style.display = "none";
+  				else{showBody.style.display = "none";
   				//console.log("else: now " + showBody.style.display);
-       		//}
+       		}
        	}		
       };
     </script>
@@ -102,7 +103,7 @@
 				
 				<h3 id = "subject" class="categories">Subject</h3>
 
-				<h3 id = "body" class="categories">Body</h3>
+					<h3 id = "body" class="categories">Body</h3>
 			</div>	
 		<footer>
 			<p id="credit">Site Design and Development By Kristin Treder</p>
