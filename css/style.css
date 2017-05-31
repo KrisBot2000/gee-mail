@@ -4,34 +4,17 @@
 }
 
 #counter{
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 }
 
-#whole{
 
-}
-
-#doggies{
-
-}
-
-#kitties{
-
-}
-
-#boots{
-	
-}
-
-#fishies{
-	display: none;
-}
 
 #credit{
 	font-size: 20px;
 	text-align: left;
 	float: bottom;
+	
 }
 
 
