@@ -12,11 +12,13 @@
 	display: inline-block;
 	font-size: 20px;
 	text-align: left;
+	/*float: left;*/
 }
 
 #credit{
 	font-size: 20px;
 	text-align: left;
+	float: bottom;
 }
 #fishies{
 	style.display: "none";
