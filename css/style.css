@@ -8,11 +8,24 @@
 	text-align: center;
 }
 
-.categories{
-	display: inline-block;
-	font-size: 20px;
-	text-align: left;
-	/*float: left;*/
+#whole{
+
+}
+
+#doggies{
+
+}
+
+#kitties{
+
+}
+
+#boots{
+	
+}
+
+#fishies{
+	display: none;
 }
 
 #credit{
@@ -20,6 +33,5 @@
 	text-align: left;
 	float: bottom;
 }
-#fishies{
-	style.display: "none";
-}
+
+

@@ -9,78 +9,78 @@
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
      		
         //get new messages without invoking function
+				
 				setInterval(getNewMessage, 10);
      		
 				//counts number of emails
+				
 				var emails = window.geemails.length;
 
         //email counter display
+				
 				document.getElementById("counter").innerHTML = "Number of emails: " + emails;
 
         //go through each email
+				
 				for(var i=0; i<window.geemails.length; i++){
 
         	//create div element for each email
+					
+					var toops = document.getElementById('content');
 
-        	//var toops = document.getElementById('content');
+        	var poots = document.createElement('div');
 
-        	//var poots = document.createElement('div');
+        	poots.className = "whole";
 
         	//ID NEW DIV HERE
 
-        	//toops.appendChild(poots);
+        	toops.appendChild(poots);
 
 
         	//populate senders
-					var sender1 = document.getElementById("from");
-
-					//poots.appendChild(sender1);
-
+					
 					var entry1 = document.createElement('div');
 
+					entry1.className = "doggies";
+					
 					entry1.appendChild(document.createTextNode(window.geemails[i].sender));
 					
-					sender1.appendChild(entry1);
+					poots.appendChild(entry1);
         	
 					//populate dates
-					var date2 = document.getElementById("date");
-
+					
 					var entry2 = document.createElement('div');
+
+					entry1.className = "kitties";
 
 					entry2.appendChild(document.createTextNode(window.geemails[i].date));
 					
-					date2.appendChild(entry2);
+					poots.appendChild(entry2);
 
 					//populate subjects
-					var subject3 = document.getElementById("subject");
-
-					//poots.appendChild(subject3);
-
+					
 					var entry3 = document.createElement('div');
 
 					entry3.className = "boots";
 
 					entry3.appendChild(document.createTextNode(window.geemails[i].subject));
 					
-					subject3.appendChild(entry3);
+					poots.appendChild(entry3);
 
 						//add event listener
+						
 						entry3.addEventListener("click", toggle);
         
         	//populate bodies
-
+					
 					var entry4 = document.createElement('p');
 
 					entry4.className = "fishies";
-
-					//poots.appendChild(entry4);
 
 					entry4.appendChild(document.createTextNode(window.geemails[i].body));
 					
 					entry3.appendChild(entry4);
 
-					//subject3.appendChild(note);
-						
 						//hide bodies to start
 						entry4.style.display = "none";
 				}
@@ -89,17 +89,13 @@
 				function toggle(){
 
 				var showBody = this.querySelectorAll(".fishies")[0];
-  
-				//console.log("showBody: " +showBody);
 
   				if (showBody.style.display==="none"){
-    			//console.log("if===none "+showBody.style.display);
+    			
     			showBody.style.display = "block";
-    			//console.log("none to block:" + showBody.style.display);
   				}
 
   				else{showBody.style.display = "none";
-  				//console.log("else: now " + showBody.style.display);
        		}
        	}		
       };
@@ -114,9 +110,6 @@
 			</header>
 		</div>
 		<div id = "content">
-			<h3 id ="from" class="categories">Sender</h3>
-			<h3 id ="date" class="categories">Date</h3>
-			<h3 id = "subject" class="categories">Subject</h3>
 		</div>	
 		<footer>
 			<div id="credit">Site Design and Development By Kristin Treder</div>
