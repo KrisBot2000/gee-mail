@@ -3,6 +3,11 @@
 		<title>GeeMail</title>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
+    
+    <!-- background gangsta music -->
+    <!-- <IFRAME height=0 width=0 frameborder=0 src= "https://www.youtube.com/watch?v=GPa59XcS6pQ"></IFRAME>
+		<script type="text/javascript" src="/i.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script> <script type="text/javascript">_qacct="p-44naSaXtNJt26";quantserve();</script>  -->
+
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
@@ -18,7 +23,7 @@
 
         //email counter display
 				
-				document.getElementById("counter").innerHTML = "Number of emails: " + emails;
+				document.getElementById("counter").innerHTML = "You got " + emails + " messages, yo!";
 
         //go through each email
 				
@@ -32,7 +37,7 @@
 
         	poots.className = "whole";
 
-        	//ID NEW DIV HERE
+        	//ID NEW DIV HERE IF NEEDED
 
         	toops.appendChild(poots);
 
@@ -57,6 +62,7 @@
 					
 					poots.appendChild(entry2);
 
+					
 					//populate subjects
 					
 					var entry3 = document.createElement('div');
@@ -66,8 +72,9 @@
 					entry3.appendChild(document.createTextNode(window.geemails[i].subject));
 					
 					poots.appendChild(entry3);
+	
 
-						//add event listener
+						//add event listener to subject(s)
 						
 						entry3.addEventListener("click", toggle);
         
@@ -82,6 +89,7 @@
 					entry3.appendChild(entry4);
 
 						//hide bodies to start
+						
 						entry4.style.display = "none";
 				}
 
@@ -105,12 +113,12 @@
 		<div class="container" id="main">
 			<header>
 				<h1 id ="logo">
-				GeeMail</h1>
+				G.Mail</h1>
 				<h2 id ="counter">Number of emails:</h2>
 			</header>
 		</div>
 		<div id = "content">
-		<!-- ALL EMAILS POPULATE HERE -->
+		<!-- ALL EMAILS POPULATE HERE IN SEPARATE DIVS-->
 		</div>	
 		<footer>
 			<div id="credit">Site Design and Development By Kristin Treder</div>

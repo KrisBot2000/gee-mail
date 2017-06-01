@@ -8,13 +8,32 @@
 	text-align: center;
 }
 
+.doggies{
+	float:left;
+	width:32%;
+	
+}
+
+.kitties{
+	float:left;
+	width:32%;
+	
+}
+
+.boots{
+	float:left;
+	width:32%;
+	
+}
 
 
 #credit{
 	font-size: 20px;
 	text-align: left;
 	float: bottom;
-	
 }
 
+body div { 
+    
+}
 
