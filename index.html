@@ -13,10 +13,21 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
      		
-        //get new messages without invoking function
-				
-				setInterval(getNewMessage, 10);
+     		//populate emails
+     		//maamajaama();
+
+        //get new messages
+       //  function cat(){
+     		// 	var kitty = getNewMessage();
+     		// 	window.geemails.push(kitty);
+     		// 		maamajaama();
+     		// }
+     		// //
+
+     		// setInterval(cat, 3000);
      		
+     		// function maamajaama(){
+
 				//counts number of emails
 				
 				var emails = window.geemails.length;
@@ -97,16 +108,16 @@
 				function toggle(){
 
 				var showBody = this.querySelectorAll(".fishies")[0];
-
+					//if hidden
   				if (showBody.style.display==="none"){
-    			
+    			//then show
     			showBody.style.display = "block";
   				}
-
+  				//otherwise hide
   				else{showBody.style.display = "none";
        		}
-       	}		
-      };
+       	//}		
+      }};
     </script>
 	</head>
 	<body>
@@ -114,14 +125,14 @@
 			<header>
 				<h1 id ="logo">
 				G.Mail</h1>
-				<h2 id ="counter">Number of emails:</h2>
+				<h2 id ="counter"></h2>
 			</header>
+			<div id = "content">
+			<!-- ALL EMAILS POPULATE HERE IN SEPARATE DIVS-->
+			</div>	
+			<footer>
+				<div id="credit">Site Design and Development By Kristin Treder</div>
+			</footer>
 		</div>
-		<div id = "content">
-		<!-- ALL EMAILS POPULATE HERE IN SEPARATE DIVS-->
-		</div>	
-		<footer>
-			<div id="credit">Site Design and Development By Kristin Treder</div>
-		</footer>
 	</body>
 </html>
