@@ -1,39 +1,95 @@
+
+body{
+	background: url(http://www.desktopimages.org/pictures/2012/0114/1/orig_459861.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.whole{
+	
+	/*border:5px solid white;
+	float:left;
+	width:32%;
+	background-color: rgba(255,255,255,.5);*/
+	
+}
+
+/*font-family: 'Monoton', cursive;
+font-family: 'Slackey', cursive;
+font-family: 'Clicker Script', cursive;*/
+
 #logo{
-	font-size: 120px;
+	color: rgb(249, 27, 194);
+	font-family:'Monoton', cursive;
+	font-size: 9.0em;
 	text-align: center;
 }
 
 #counter{
-	font-size: 40px;
+	color: rgb(209, 247, 39);
+
+	font-family:'Monoton', cursive;
+	font-size: 3.0em;
 	text-align: center;
 }
 
-.doggies{
+.title{
 	float:left;
 	width:32%;
+	font-family: 'Slackey', cursive;
+	color:white;
+	text-align: center;
+	font-size: 2.0em;
+}
+
+.doggies, .kitties, .boots{
+	float:left;
+	width:32%;
+	border:5px solid white;
+	background-color: rgba(255,255,255,.5);
+	font-family: 'Clicker Script', cursive;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.1;
+	padding: 2px 0px 2px 4px;
 	
 }
 
-.kitties{
+
+
+/*.kitties{
 	float:left;
 	width:32%;
-	
+	border:5px solid white;
+	background-color: rgba(255,255,255,.5);
+
+
 }
 
 .boots{
 	float:left;
 	width:32%;
+	border:5px solid white;
+	background-color: rgba(255,255,255,.5);
+
+
+}*/
+.boots:hover{
+	background-color: rgb(251, 183, 255);
+}
+
+#credit{
+	color: rgb(178, 10, 136);
+	font-family: 'Slackey', cursive;
+	font-size: 2.0em;
+	text-align: left;
+	float: bottom;
 	
 }
 
 
-#credit{
-	font-size: 20px;
-	text-align: left;
-	float: bottom;
-}
 
-body div { 
-    
-}
+
 

@@ -1,54 +1,77 @@
 <html>
 	<head>
-		<title>GeeMail</title>
+		<title>G.Mail</title>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     
+		<link href="https://fonts.googleapis.com/css?family=Clicker+Script|Monoton|Slackey" rel="stylesheet">
+
     <!-- background gangsta music -->
-    <!-- <IFRAME height=0 width=0 frameborder=0 src= "https://www.youtube.com/watch?v=GPa59XcS6pQ"></IFRAME>
-		<script type="text/javascript" src="/i.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script> <script type="text/javascript">_qacct="p-44naSaXtNJt26";quantserve();</script>  -->
+    <IFRAME height=0 width=0 frameborder=0 src= "https://www.youtube.com/watch?v=GPa59XcS6pQ"></IFRAME>
+		<script type="text/javascript" src="/i.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script> <script type="text/javascript">_qacct="p-44naSaXtNJt26";quantserve();</script> 
 
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
      		
-     		//populate emails
-     		//maamajaama();
+     		//toggle between show and hide email bodies
+				
+				var i;
 
-        //get new messages
-       //  function cat(){
-     		// 	var kitty = getNewMessage();
-     		// 	window.geemails.push(kitty);
-     		// 		maamajaama();
-     		// }
-     		// //
+				function toggle(){
 
-     		// setInterval(cat, 3000);
+				var showBody = this.querySelectorAll(".fishies")[0];
+					//if hidden
+  				if (showBody.style.display==="none"){
+    			//then show
+    			showBody.style.display = "block";
+  				}
+  				//otherwise hide
+  				else{showBody.style.display = "none";
+       		}
+       	}		
+
+				//populate new email
+
+        function cat(){
+     			
+     			var kitty = getNewMessage();
+     			window.geemails.push(kitty);
+     		 	yippee();
+     		 	i++;
+     		}
+
+     		//generate new email on time intervals
+
+        setInterval(cat, 3000);
      		
-     		// function maamajaama(){
-
-				//counts number of emails
+     		//go through each email
 				
-				var emails = window.geemails.length;
+				for(i=0; i<window.geemails.length; i++){ 
+        
+        	yippee();
+        }	
+					
 
-        //email counter display
+
+				function yippee(){
+
+					//counts number of emails
+
+					var emails = window.geemails.length;
+
+        	//email counter display
 				
-				document.getElementById("counter").innerHTML = "You got " + emails + " messages, yo!";
+					document.getElementById("counter").innerHTML = "You got " + emails + " messages, yo!";
 
-        //go through each email
-				
-				for(var i=0; i<window.geemails.length; i++){
-
-        	//create div element for each email
+					//create div element for each email
 					
 					var toops = document.getElementById('content');
 
         	var poots = document.createElement('div');
 
         	poots.className = "whole";
-
-        	//ID NEW DIV HERE IF NEEDED
 
         	toops.appendChild(poots);
 
@@ -103,21 +126,10 @@
 						
 						entry4.style.display = "none";
 				}
+				
 
-				//toggle between show and hide email bodies
-				function toggle(){
-
-				var showBody = this.querySelectorAll(".fishies")[0];
-					//if hidden
-  				if (showBody.style.display==="none"){
-    			//then show
-    			showBody.style.display = "block";
-  				}
-  				//otherwise hide
-  				else{showBody.style.display = "none";
-       		}
-       	//}		
-      }};
+				
+      };
     </script>
 	</head>
 	<body>
@@ -126,6 +138,9 @@
 				<h1 id ="logo">
 				G.Mail</h1>
 				<h2 id ="counter"></h2>
+				<h3 class ="title">Sender</h3>
+				<h3 class ="title">Date</h3>
+				<h3 class ="title">Subject</h3>
 			</header>
 			<div id = "content">
 			<!-- ALL EMAILS POPULATE HERE IN SEPARATE DIVS-->
