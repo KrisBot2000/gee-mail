@@ -3,22 +3,9 @@ body{
 	background: url(http://www.desktopimages.org/pictures/2012/0114/1/orig_459861.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
-	
+	background-position: center;	
 }
 
-.whole{
-	
-	/*border:5px solid white;
-	float:left;
-	width:32%;
-	background-color: rgba(255,255,255,.5);*/
-	
-}
-
-/*font-family: 'Monoton', cursive;
-font-family: 'Slackey', cursive;
-font-family: 'Clicker Script', cursive;*/
 
 #logo{
 	color: rgb(249, 27, 194);
@@ -29,7 +16,6 @@ font-family: 'Clicker Script', cursive;*/
 
 #counter{
 	color: rgb(209, 247, 39);
-
 	font-family:'Monoton', cursive;
 	font-size: 3.0em;
 	text-align: center;
@@ -53,29 +39,9 @@ font-family: 'Clicker Script', cursive;*/
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 1.1;
-	padding: 2px 0px 2px 4px;
-	
+	padding: 2px 0px 2px 4px;	
 }
 
-
-
-/*.kitties{
-	float:left;
-	width:32%;
-	border:5px solid white;
-	background-color: rgba(255,255,255,.5);
-
-
-}
-
-.boots{
-	float:left;
-	width:32%;
-	border:5px solid white;
-	background-color: rgba(255,255,255,.5);
-
-
-}*/
 .boots:hover{
 	background-color: rgb(251, 183, 255);
 }
@@ -85,8 +51,7 @@ font-family: 'Clicker Script', cursive;*/
 	font-family: 'Slackey', cursive;
 	font-size: 2.0em;
 	text-align: left;
-	float: bottom;
-	
+	float: bottom;	
 }
 
 
